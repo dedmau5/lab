@@ -10,7 +10,7 @@ const swedishZipCodes = ['11111', '22222', '33333', '44444', '55555', /* add mor
 function generateData(numRows) {
     const data = [];
     for (let i = 0; i < numRows; i++) {
-        const name = chance.pickone(swedishNames) + chance.pickone(swedishSurnames);
+        const name = chance.pickone(swedishNames) + ' ' + chance.pickone(swedishSurnames);
         const email = chance.email();
         const city = chance.pickone(swedishCities);
         const zipcode = chance.pickone(swedishZipCodes);
