@@ -4,7 +4,7 @@ const chance = new Chance();
 // Define arrays of Swedish names, cities, zip codes, etc.
 const swedishNames = ['Anna', 'Erik', 'Lena', 'Johan', 'Maria', 'Svenne', 'Cheyni'  /* add more names */];
 const swedishSurnames = ['Carlsson', 'Larsson', 'Kronbladh', 'Roos', 'Frostkant', 'Banansson', 'Miao'];
-const swedishCities = ['Stockholm', 'Gothenburg', 'Malmo', 'Uppsala', 'Linkoping', /* add more cities */];
+const swedishCities = ['Stockholm', 'Gothenburg', 'Malmo', 'Uppsala', 'Linkoping', 'Kristinehamn' /* add more cities */];
 const swedishZipCodes = ['11111', '22222', '33333', '44444', '55555', /* add more zip codes */];
 
 function generateData(numRows) {
@@ -26,6 +26,6 @@ function writeToFile(data) {
     fs.writeFileSync('testdata.csv', 'Name,Email,City,Zipcode,Phone Number\n' + data.map(row => row.join(',')).join('\n'), 'utf-8');
 }
 
-const numRows = 10; // You can change this to the desired number of rows
+const numRows = 100; // You can change this to the desired number of rows
 const testData = generateData(numRows);
 writeToFile(testData);
